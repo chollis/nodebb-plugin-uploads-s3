@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-uploads-s3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A NodeBB plugin that stores image and file uploads in AWS S3 rather than locally.",
   "main": "uploads-s3.js",
   "repository": {
