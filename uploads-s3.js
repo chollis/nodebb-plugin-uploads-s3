@@ -114,8 +114,6 @@ Uploads.addAdminNavigation = (header) => {
 async function shouldResizeImage(imagePath, imageType) {
     const imageData = await image.size(imagePath);
 
-    winston.info(`ImageType is ${imageType}, ImageWidth is ${imageData.width}, ResizeThreshold is ${meta.config.resizeImageWidthThreshold}, ResizeWidth is ${meta.config.resizeImageWidth}`);
-
     if (imageType === 'image/svg+xml') { return false; } // svg can't be resized by Sharp
     if (meta.config.resizeImageWidth === 0 || meta.config.resizeImageWidthThreshold === 0) { return false; } // resize settings are disabled
     if (imageData.width < meta.config.resizeImageWidthThreshold || meta.config.resizeImageWidth > meta.config.resizeImageWidthThreshold) { return false; } // image is smaller than threshold or resize to specific width is set greater than threshold
