@@ -1,0 +1,17 @@
+{
+    "id": "nodebb-plugin-uploads-s3",
+    "name": "Uploads (AWS S3)",
+    "description": "Use AWS S3 for storing NodeBB user uploads",
+    "url": "https://github.com/chollis/nodebb-plugin-uploads-s3",
+    "library": "./uploads-s3.js",
+    "templates": "templates",
+    "hooks": [
+        { "hook": "static:app.load", "method": "init" },
+        { "hook": "filter:uploadFile", "method": "uploadFile" },
+        { "hook": "filter:uploadImage", "method": "uploadImage" },
+        { "hook": "filter:admin.header.build", "method": "addAdminNavigation" } 
+    ],
+    "modules": {
+		"../admin/plugins/uploads-s3.js": "./public/lib/admin.js"
+	}
+}

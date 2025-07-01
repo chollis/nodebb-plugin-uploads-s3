@@ -1,0 +1,36 @@
+{
+  "name": "nodebb-plugin-uploads-s3",
+  "version": "1.0.0",
+  "description": "A NodeBB plugin that stores image and file uploads in AWS S3 rather than locally.",
+  "main": "uploads-s3.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chollis/nodebb-plugin-uploads-s3"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "uploads",
+    "s3",
+    "aws"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Craig Hollis <chollis@chollis.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chollis/nodebb-plugin-uploads-s3/issues"
+  },
+  "homepage": "https://github.com/chollis/nodebb-plugin-uploads-s3",
+  "nbbpm": {
+    "compatibility": "^3.2.0 || ^4.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.837.0",
+    "@aws-sdk/lib-storage": "^3.837.0"
+  }
+}
